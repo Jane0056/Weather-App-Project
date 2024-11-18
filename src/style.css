@@ -1,13 +1,23 @@
 body {
     background: #f9f7feec;
     font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
     color: #7c50ec;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.weather-container {
+a:hover {
+    color: #5a30d4;
+}
+
+/* Weather App Container */
+.weather-app {
     background: white;
     max-width: 600px;
     margin: 48px auto;
@@ -18,7 +28,7 @@ a {
 
 header {
     border-bottom: 1px solid #f9f7feec;
-    padding: 0 0 30px 0;
+    padding-bottom: 30px;
 }
 
 .search-input {
@@ -29,8 +39,13 @@ header {
     padding: 15px 20px;
     width: 75%;
     border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-
+.search-input:focus {
+    outline: none;
+    background-color: #e9e7f6;
+    color: #272142;
 }
 
 .search-button {
@@ -40,62 +55,81 @@ header {
     color: white;
     border: none;
     padding: 15px 30px;
-    line-height: 1;
     border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease
 }
 
+.search-button:hover {
+    background-color: #6b3fd1;
+}
+
+/* Main Content Styles */
 main {
     padding: 30px 0;
 }
 
-.weather-data {
+.current-weather {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.weather-city-app {
+.current-city {
     margin: 0;
     font-size: 35px;
     line-height: 45px;
 }
 
-.weather-details {
+.current-details {
     font-size: 17px;
     color: rgba(37, 31, 66, 0.4);
     line-height: 25px;
     font-weight: 500;
 }
 
-
-.weather-details strong {
+.current-details strong {
     color: #f13f74;
 }
 
-.weather-app {
-    display: flex;
-}
-
+/* Weather Icon and Temperature */
 .weather-app-icon {
     width: 85px;
     height: 85px;
 }
 
-.weather-application-temperature {
+.current-temperature {
+    display: flex;
+    align-items: center;
+}
+
+.current-temperature-value {
     font-size: 85px;
     line-height: 85px;
     font-weight: bold;
+    margin-right: 8px;
 }
 
-.weather-unit {
-    margin-top: 6px;
+.current-temperature-unit {
     font-size: 28px;
+    margin-top: 6px;
 }
 
+/* Footer Styles */
 footer {
     border-top: 1px solid #f9f7feec;
-    padding: 30px 0 0 0;
-    font-weight: 500;
+    padding-top: 30px;
     text-align: center;
     font-size: 12px;
     color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+}
+
+footer a {
+    color: #7c50ec;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #5a30d4;
 }
