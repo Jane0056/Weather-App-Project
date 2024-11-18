@@ -40,25 +40,8 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
 
   let day = days[date.getDay()];
-  let month = months[date.getMonth()];
-  let dayOfMonth = date.getDate();
-  let year = date.getFullYear();
 
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -67,7 +50,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day}, ${month} ${dayOfMonth}, ${year} ${hours}:${minutes}`;
+  return `${day},  ${hours}:${minutes}`;
 }
 
 // Function to fetch weather details for a city
