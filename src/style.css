@@ -43,3 +43,50 @@ header {
     line-height: 1;
     border-radius: 7px;
 }
+
+main {
+    padding: 30px 0;
+}
+
+.weather-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-city-app {
+    margin: 0;
+    font-size: 35px;
+    line-height: 45px;
+}
+
+.weather-details {
+    font-size: 17px;
+    color: rgba(37, 31, 66, 0.4);
+    line-height: 25px;
+    font-weight: 500;
+}
+
+
+.weather-details strong {
+    color: #f13f74;
+}
+
+.weather-app {
+    display: flex;
+}
+
+.weather-app-icon {
+    width: 85px;
+    height: 85px;
+}
+
+.weather-application-temperature {
+    font-size: 85px;
+    line-height: 85px;
+    font-weight: bold;
+}
+
+.weatehr-unit {
+    margin-top: 6px;
+    font-size: 28px;
+}
