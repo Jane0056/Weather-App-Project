@@ -18,6 +18,29 @@ function weatherDetail(response) {
   temperatureElement.innerHTML = math.round(temperature);
 }
 
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day}${hours}:${minutes}`;
+}
+
 function searchCity(city) {
   let apiKey = "0c0fc4d0af9a25bbb3ad3644ab6e153c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;

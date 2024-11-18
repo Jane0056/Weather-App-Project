@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,13 +25,13 @@
         <main>
             <div class="weather-data">
                 <div>
-                    <h1 class="weather-city-app" id="current-city">Paris</h1>
+                    <h1 class="weather-city-app" id="current-city"></h1>
                     <p class="weather-details">
-                        <span id="city-time"> Monday 20.30</span>
+                        <span id="city-time"> </span>
                         <span id="description"></span>
                         <br />
                         Humditiy:<strong id="Humditiy-details"></strong>,
-                        Wind:<strong id="speed-details">3.12km/h</strong>
+                        Wind:<strong id="speed-details"></strong>
                     </p>
                 </div>
                 <div class="weather-app">
