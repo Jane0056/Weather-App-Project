@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="weather-app">
+    <div class="weather-container">
         <header>
             <form class="search-form" id="search-form">
                 <input type="search" placeholder="Enter a city..." required id="search-form-input"
@@ -21,6 +21,29 @@
                 <input type="submit" value="search" class="search-button">
             </form>
         </header>
+        <main>
+            <div class="weather-data">
+                <div>
+                    <h1 class="weather-city-app" id="city">Paris</h1>
+                    <p class="weather-details">
+                        <span id="time"> Monday 20.30</span>
+                        <span id="description">light rain</span>
+                        <br />
+                        Humditiy:<strong id="Humditiy-details">66%</strong>,
+                        Wind:<strong id="speed-details">3.12km/h</strong>
+                    </p>
+                </div>
+                <div class="weather-app">
+                    <div id="weather-icon">
+                        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png"
+                            class="weather-app-icon">
+                    </div>
+                    <div class="weather-application-temperature" id="temperature">11</div>
+                    <div class="weather-unit">°C</div>
+                </div>
+            </div>
+        </main>
+
     </div>
 
 
