@@ -28,3 +28,72 @@ function weatherDetail(response) {
   let now = new Date();
   currentDateElement.innerHTML = formatDate(now);
 }
+
+// Function to format the date and time
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  let day = days[date.getDay()];
+  let month = months[date.getMonth()];
+  let dayOfMonth = date.getDate();
+  let year = date.getFullYear();
+
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day}, ${month} ${dayOfMonth}, ${year} ${hours}:${minutes}`;
+}
+
+// Function to fetch weather details for a city
+function searchCity(city) {
+  let apiKey = "0c0fc4d0af9a25bbb3ad3644ab6e153c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+  axios
+    .get(apiUrl)
+    .then(weatherDetail)
+    .catch((error) => {
+      alert("City not found. Please try again.");
+      console.error("Error fetching weather data:", error);
+    });
+}
+
+// Function to handle form submission
+function search(event) {
+  event.preventDefault();
+  let searchInputElement = document.querySelector("#search-input");
+  searchCity(searchInputElement.value.trim());
+}
+
+// Add event listener to the search form
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", search);
+
+// Fetch default city weather on page load
+searchCity("Berlin");
