@@ -14,7 +14,7 @@ a {
 }
 
 a:hover {
-    color: #5a30d4;
+    color: #0d0229;
 }
 
 
@@ -67,7 +67,7 @@ header {
 }
 
 .search-button:hover {
-    background-color: #6b3fd1;
+    background-color: #0d0229;
 }
 
 /* Main Content Styles */
@@ -128,7 +128,7 @@ footer {
     border-top: 1px solid #f9f7feec;
     padding-top: 30px;
     text-align: center;
-    font-size: 12px;
+    font-size: 17px;
     color: rgba(0, 0, 0, 0.6);
     font-weight: 500;
 }
@@ -139,7 +139,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #5a30d4;
+    color: #0d0229;
 }
 
 /* Phones */
