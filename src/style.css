@@ -17,6 +17,7 @@ a:hover {
     color: #5a30d4;
 }
 
+
 /* Weather App Container */
 .weather-app {
     background: white;
@@ -26,6 +27,7 @@ a:hover {
     border-radius: 15px;
     padding: 30px;
 }
+
 
 /* Header Styles */
 header {
@@ -42,6 +44,7 @@ header {
     width: 75%;
     border-radius: 6px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block
 }
 
 .search-input:focus {
@@ -60,6 +63,7 @@ header {
     border-radius: 7px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
 .search-button:hover {
@@ -75,6 +79,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .current-city {
@@ -103,6 +108,7 @@ main {
 .current-temperature {
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 .current-temperature-value {
@@ -134,4 +140,75 @@ footer a {
 
 footer a:hover {
     color: #5a30d4;
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .weather-app {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .search-input {
+        width: calc(100% - 90px);
+        font-size: 14px;
+    }
+
+    .search-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .current-city {
+        font-size: 28px;
+    }
+
+    .current-temperature-value {
+        font-size: 60px;
+    }
+
+    .current-details {
+        font-size: 14px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .weather-app {
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    .search-input {
+        font-size: 15px;
+    }
+
+    .search-button {
+        font-size: 15px;
+        padding: 12px 25px;
+    }
+
+    .current-city {
+        font-size: 32px;
+    }
+
+    .current-temperature-value {
+        font-size: 70px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+    .weather-app {
+        max-width: 700px;
+    }
+
+    .current-city {
+        font-size: 38px;
+    }
+
+    .current-temperature-value {
+        font-size: 90px;
+    }
 }
